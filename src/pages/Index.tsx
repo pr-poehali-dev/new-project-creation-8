@@ -10,6 +10,7 @@ import CasesSection from "@/components/CasesSection";
 import TrustSection from "@/components/TrustSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FaqSection from "@/components/FaqSection";
+import OfferSection from "@/components/OfferSection";
 import CoursesSection from "@/components/CoursesSection";
 import AboutContacts from "@/components/AboutContacts";
 
@@ -59,6 +60,8 @@ export default function Index() {
       <HowItWorksSection />
 
       <FaqSection />
+
+      <OfferSection />
 
       <CoursesSection />
 
