@@ -39,6 +39,7 @@ const STEPS = [
 export default function HowItWorksSection() {
   const [inView, setInView] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
+  const [paused, setPaused] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -50,12 +51,12 @@ export default function HowItWorksSection() {
     return () => observer.disconnect();
   }, []);
 
-  // auto-cycle steps
+  // auto-cycle steps — stops when paused
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || paused) return;
     const t = setInterval(() => setActiveStep(p => (p + 1) % STEPS.length), 3000);
     return () => clearInterval(t);
-  }, [inView]);
+  }, [inView, paused]);
 
   return (
     <section ref={ref} id="how" className="relative py-24 px-6 bg-white overflow-hidden">
@@ -108,7 +109,7 @@ export default function HowItWorksSection() {
             {STEPS.map((step, i) => (
               <button
                 key={i}
-                onClick={() => setActiveStep(i)}
+                onClick={() => { setActiveStep(i); setPaused(true); }}
                 className="relative z-10 flex flex-col items-center gap-2 group"
               >
                 <div
@@ -171,12 +172,12 @@ export default function HowItWorksSection() {
                     {STEPS[activeStep].detail}
                   </span>
                 </div>
-                {/* Step dots */}
+                {/* Step dots + pause indicator */}
                 <div className="flex items-center gap-2 pl-1">
                   {STEPS.map((_, i) => (
                     <button
                       key={i}
-                      onClick={() => setActiveStep(i)}
+                      onClick={() => { setActiveStep(i); setPaused(true); }}
                       className="transition-all duration-300 rounded-full"
                       style={{
                         width: i === activeStep ? 24 : 8,
@@ -185,6 +186,16 @@ export default function HowItWorksSection() {
                       }}
                     />
                   ))}
+                  {paused && (
+                    <button
+                      onClick={() => setPaused(false)}
+                      className="ml-2 flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full transition-all duration-200"
+                      style={{ background: "var(--teal-pale)", color: "var(--teal)" }}
+                    >
+                      <Icon name="Play" size={10} style={{ color: "var(--teal)" }} />
+                      авто
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
