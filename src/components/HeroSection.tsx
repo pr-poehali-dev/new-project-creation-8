@@ -115,11 +115,22 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             </button>
           </div>
 
-          {/* Social proof */}
-          <p className="mt-5 text-sm text-[#6b7280] animate-fade-up delay-500">
+          {/* Stats mini-row */}
+          <div className="mt-6 flex flex-wrap gap-4 animate-fade-up delay-500">
+            {[
+              { value: "24", label: "урока" },
+              { value: "72 ч", label: "практики" },
+              { value: "30", label: "участников" },
+            ].map(s => (
+              <div key={s.label} className="flex items-center gap-2">
+                <span className="font-montserrat font-black text-xl" style={{ color: "var(--teal)" }}>{s.value}</span>
+                <span className="text-sm text-[#6b7280]">{s.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-sm text-[#6b7280] animate-fade-up delay-500">
             Ближайший поток стартует{" "}
-            <strong className="text-[#1e2330]">1 августа</strong> — группа до{" "}
-            <strong style={{ color: "var(--teal)" }}>30 человек</strong>
+            <strong className="text-[#1e2330]">1 августа</strong>
           </p>
         </div>
 

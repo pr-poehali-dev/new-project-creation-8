@@ -43,8 +43,8 @@ const PARTNERS = [
 
 const STATS = [
   { value: "47+", label: "выпускников" },
-  { value: "4.9", label: "средний рейтинг" },
-  { value: "3", label: "потока проведено" },
+  { value: "24", label: "урока в программе" },
+  { value: "72 ч", label: "практики" },
   { value: "№1", label: "живая школа ИИ во Владивостоке" },
 ];
 
