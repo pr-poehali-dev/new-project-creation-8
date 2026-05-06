@@ -1,6 +1,6 @@
 import Icon from "@/components/ui/icon";
 
-const NAV_LINKS = ["Главная", "Курсы", "Блог", "О платформе", "Контакты"];
+const NAV_LINKS = ["Главная", "Программа", "Кейсы", "FAQ", "Записаться"];
 
 interface NavbarProps {
   activeSection: string;
@@ -55,11 +55,9 @@ export default function Navbar({ activeSection, menuOpen, setMenuOpen, scrollTo 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
           <button
-            className="btn-secondary text-sm px-4 py-2 rounded-lg font-medium"
+            onClick={() => scrollTo("Записаться")}
+            className="btn-primary text-sm px-5 py-2.5 rounded-lg font-semibold"
           >
-            Войти
-          </button>
-          <button className="btn-primary text-sm px-5 py-2 rounded-lg font-semibold">
             Забронировать место
           </button>
         </div>
@@ -92,12 +90,12 @@ export default function Navbar({ activeSection, menuOpen, setMenuOpen, scrollTo 
               {link}
             </button>
           ))}
-          <div className="flex gap-3 mt-4">
-            <button className="btn-secondary flex-1 py-2.5 rounded-lg text-sm font-medium">
-              Войти
-            </button>
-            <button className="btn-primary flex-1 py-2.5 rounded-lg text-sm font-semibold">
-              Забронировать
+          <div className="mt-4">
+            <button
+              onClick={() => scrollTo("Записаться")}
+              className="btn-primary w-full py-3 rounded-xl text-sm font-semibold"
+            >
+              Забронировать место
             </button>
           </div>
         </div>

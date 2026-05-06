@@ -11,8 +11,7 @@ import TrustSection from "@/components/TrustSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import FaqSection from "@/components/FaqSection";
 import OfferSection from "@/components/OfferSection";
-import CoursesSection from "@/components/CoursesSection";
-import AboutContacts from "@/components/AboutContacts";
+import FinalCtaSection from "@/components/FinalCtaSection";
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState("Главная");
@@ -23,10 +22,10 @@ export default function Index() {
     setMenuOpen(false);
     const map: Record<string, string> = {
       "Главная": "hero",
-      "Курсы": "courses",
-      "Блог": "blog",
-      "О платформе": "about",
-      "Контакты": "contacts",
+      "Программа": "program",
+      "Кейсы": "cases",
+      "FAQ": "faq",
+      "Записаться": "offer",
     };
     const el = document.getElementById(map[section]);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -63,9 +62,7 @@ export default function Index() {
 
       <OfferSection />
 
-      <CoursesSection />
-
-      <AboutContacts scrollTo={scrollTo} />
+      <FinalCtaSection />
     </div>
   );
 }
