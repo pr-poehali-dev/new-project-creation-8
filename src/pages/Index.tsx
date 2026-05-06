@@ -8,6 +8,7 @@ import WhyUsSection from "@/components/WhyUsSection";
 import ProgramSection from "@/components/ProgramSection";
 import CasesSection from "@/components/CasesSection";
 import TrustSection from "@/components/TrustSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
 import CoursesSection from "@/components/CoursesSection";
 import AboutContacts from "@/components/AboutContacts";
 
@@ -53,6 +54,8 @@ export default function Index() {
       <CasesSection />
 
       <TrustSection />
+
+      <HowItWorksSection />
 
       <CoursesSection />
 
