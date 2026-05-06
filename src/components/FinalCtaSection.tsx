@@ -193,7 +193,7 @@ export default function FinalCtaSection() {
 
           {/* Bottom row */}
           <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-white/25 text-xs">© 2025 Хакни Нейросети. Все права защищены.</p>
+            <p className="text-white/25 text-xs">© 2024–2026 Хакни Нейросети. Все права защищены.</p>
             <p className="text-white/20 text-xs">Единственная живая школа ИИ во Владивостоке</p>
           </div>
         </div>
