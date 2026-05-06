@@ -53,6 +53,15 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
         {/* LEFT: copy */}
         <div className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
 
+          {/* Logo */}
+          <div className="mb-6 animate-fade-up">
+            <img
+              src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/eb2c3a43-a98c-4f83-af2d-ab3f971167a4.png"
+              alt="Хакни Нейросети"
+              className="h-16 w-auto object-contain"
+            />
+          </div>
+
           {/* Badge */}
           <div
             className="inline-flex items-center gap-2 border rounded-full px-4 py-1.5 text-sm font-semibold mb-7 animate-fade-up"
@@ -62,7 +71,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
               className="w-2 h-2 rounded-full animate-pulse"
               style={{ background: "var(--teal)" }}
             />
-            Живая офлайн-школа ИИ во Владивостоке
+            Единственная живая школа ИИ во Владивостоке
           </div>
 
           {/* Heading */}
@@ -74,7 +83,7 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
 
           {/* Subheading */}
           <p className="text-[#3d4455] text-lg leading-relaxed mb-8 max-w-xl animate-fade-up delay-200">
-            За 3 месяца освоишь практический ИИ-инструментарий, сократишь время на типовые задачи в разы и начнёшь применять нейросети уже с первого занятия.
+            Живые занятия с Сергеем Черниковым — практический ИИ-инструментарий за 3 месяца. Сократишь время на типовые задачи в разы и начнёшь применять нейросети уже с первого дня.
           </p>
 
           {/* Bullets */}
@@ -99,18 +108,18 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             </button>
             <button
               className="btn-secondary px-8 py-4 rounded-xl text-base font-semibold flex items-center justify-center gap-2"
-              onClick={() => scrollTo("Курсы")}
+              onClick={() => scrollTo("Программа")}
             >
               <Icon name="FileText" size={18} style={{ color: "var(--teal)" }} />
-              Получить программу
+              Посмотреть программу
             </button>
           </div>
 
           {/* Social proof */}
           <p className="mt-5 text-sm text-[#6b7280] animate-fade-up delay-500">
             Ближайший поток стартует{" "}
-            <strong className="text-[#1e2330]">1 августа</strong> — осталось{" "}
-            <strong style={{ color: "var(--teal)" }}>3 места</strong>
+            <strong className="text-[#1e2330]">1 августа</strong> — группа до{" "}
+            <strong style={{ color: "var(--teal)" }}>30 человек</strong>
           </p>
         </div>
 

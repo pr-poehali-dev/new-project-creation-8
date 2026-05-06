@@ -22,16 +22,12 @@ export default function Navbar({ activeSection, menuOpen, setMenuOpen, scrollTo 
         }}
       >
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center"
-            style={{ background: "var(--teal)" }}
-          >
-            <Icon name="Brain" size={16} className="text-white" />
-          </div>
-          <span className="font-montserrat font-black text-xl tracking-tight text-[#1e2330]">
-            AI<span className="gradient-text-teal">School</span>
-          </span>
+        <div className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/eb2c3a43-a98c-4f83-af2d-ab3f971167a4.png"
+            alt="Хакни Нейросети"
+            className="h-9 w-auto object-contain"
+          />
         </div>
 
         {/* Desktop links */}

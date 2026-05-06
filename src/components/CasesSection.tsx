@@ -252,9 +252,9 @@ export default function CasesSection() {
         >
           {[
             { value: "3–10×", label: "ускорение типовых задач" },
-            { value: "12", label: "человек в группе максимум" },
+            { value: "30", label: "участников в потоке" },
             { value: "3 мес", label: "от старта до результата" },
-            { value: "100%", label: "живая практика, не теория" },
+            { value: "3", label: "спикер + 2 ассистента в зале" },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="font-montserrat font-bold text-2xl md:text-3xl mb-1" style={{ color: "var(--teal)" }}>

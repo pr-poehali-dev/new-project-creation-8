@@ -145,7 +145,7 @@ export default function TransformSection() {
                       style={{ color: step.highlight ? "var(--teal)" : "#9ca3af" }}
                     >
                       {step.id === "before" && "До обучения"}
-                      {step.id === "process" && "3 месяца · 12 занятий"}
+                      {step.id === "process" && "Сергей Черников · 3 месяца"}
                       {step.id === "after" && "После обучения"}
                     </div>
                   </div>
@@ -190,7 +190,7 @@ export default function TransformSection() {
                     style={{ background: "var(--teal)", color: "#fff" }}
                   >
                     <Icon name="MapPin" size={13} className="text-white" />
-                    AISchool Владивосток
+                    Хакни Нейросети · Владивосток
                   </div>
                 )}
               </div>
@@ -210,7 +210,7 @@ export default function TransformSection() {
             <p className="font-montserrat font-bold text-[#1e2330] text-base mb-1">
               Готов перейти из «было» в «стало»?
             </p>
-            <p className="text-[#6b7280] text-sm">Ближайший поток — 1 августа. Группы до 12 человек.</p>
+            <p className="text-[#6b7280] text-sm">Ближайший поток — 1 августа. До 30 участников.</p>
           </div>
           <button
             className="btn-primary shrink-0 px-7 py-3 rounded-xl font-semibold text-sm"

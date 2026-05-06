@@ -109,22 +109,22 @@ export default function OfferSection() {
             >
               <div className="flex items-center justify-between mb-3">
                 <span className="text-white font-semibold text-sm">Мест в ближайшем потоке</span>
-                <span className="text-white font-bold text-lg">12</span>
+                <span className="text-white font-bold text-lg">30</span>
               </div>
               {/* Progress bar */}
               <div className="h-2 rounded-full bg-white/20 overflow-hidden mb-2">
                 <div
                   className="h-full rounded-full transition-all duration-1000"
                   style={{
-                    width: inView ? "67%" : "0%",
+                    width: inView ? "73%" : "0%",
                     background: "linear-gradient(to right, rgba(255,255,255,0.9), rgba(255,255,255,0.6))",
                     transitionDelay: "0.6s",
                   }}
                 />
               </div>
               <div className="flex justify-between text-xs text-white/60">
-                <span>8 из 12 мест занято</span>
-                <span className="text-white font-semibold">4 свободных</span>
+                <span>22 из 30 мест занято</span>
+                <span className="text-white font-semibold">8 свободных</span>
               </div>
             </div>
           </div>

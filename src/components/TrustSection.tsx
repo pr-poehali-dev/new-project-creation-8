@@ -45,7 +45,7 @@ const STATS = [
   { value: "47+", label: "выпускников" },
   { value: "4.9", label: "средний рейтинг" },
   { value: "3", label: "потока проведено" },
-  { value: "Владивосток", label: "единственная живая школа" },
+  { value: "№1", label: "живая школа ИИ во Владивостоке" },
 ];
 
 function Stars({ count }: { count: number }) {
@@ -198,7 +198,7 @@ export default function TrustSection() {
         >
           {[
             { icon: "MapPin", text: "Офлайн во Владивостоке" },
-            { icon: "Users", text: "Группы до 12 человек" },
+            { icon: "Users", text: "До 30 участников · 2 ассистента в зале" },
             { icon: "Award", text: "Единственная живая школа ИИ в регионе" },
           ].map((item) => (
             <div key={item.text} className="flex items-center gap-2">

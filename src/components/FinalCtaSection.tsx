@@ -54,7 +54,7 @@ export default function FinalCtaSection() {
                 className="w-2 h-2 rounded-full animate-pulse"
                 style={{ background: "var(--teal)" }}
               />
-              Набор открыт · 4 места осталось
+              Набор открыт · 8 мест осталось
             </div>
 
             {/* Headline */}
@@ -117,19 +117,15 @@ export default function FinalCtaSection() {
 
             {/* Brand */}
             <div>
-              <div className="flex items-center gap-2.5 mb-4">
-                <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center"
-                  style={{ background: "var(--teal)" }}
-                >
-                  <Icon name="Brain" size={17} className="text-white" />
-                </div>
-                <span className="font-montserrat font-black text-white text-lg">
-                  Хакни<span style={{ color: "var(--teal)" }}> Нейросети</span>
-                </span>
+              <div className="mb-4">
+                <img
+                  src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/eb2c3a43-a98c-4f83-af2d-ab3f971167a4.png"
+                  alt="Хакни Нейросети"
+                  className="h-10 w-auto object-contain brightness-0 invert opacity-90"
+                />
               </div>
               <p className="text-white/40 text-sm leading-relaxed max-w-xs">
-                Живая школа ИИ во Владивостоке. Практическое обучение для предпринимателей и специалистов.
+                Единственная живая школа ИИ во Владивостоке. Спикер — Сергей Черников.
               </p>
             </div>
 

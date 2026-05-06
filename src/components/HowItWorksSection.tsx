@@ -249,7 +249,7 @@ export default function HowItWorksSection() {
               Готов пройти этот путь?
             </p>
             <p className="text-[#6b7280] text-sm">
-              Следующий поток начинается 1 августа. Осталось несколько мест.
+              Следующий поток начинается 1 августа. Сергей Черников и 2 ассистента. До 30 участников.
             </p>
           </div>
           <button className="btn-primary shrink-0 px-7 py-3 rounded-xl font-semibold text-sm">
