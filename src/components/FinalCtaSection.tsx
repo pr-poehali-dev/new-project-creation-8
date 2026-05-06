@@ -95,7 +95,7 @@ export default function FinalCtaSection() {
             <div className="flex flex-wrap items-center justify-center gap-6">
               {[
                 { icon: "MapPin", text: "Владивосток" },
-                { icon: "Users", text: "Группы до 12 человек" },
+                { icon: "Users", text: "До 30 человек в потоке" },
                 { icon: "Zap", text: "Практика с первого дня" },
               ].map(item => (
                 <div key={item.text} className="flex items-center gap-2 text-white/40 text-sm">
