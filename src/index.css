@@ -34,16 +34,17 @@
 
     --radius: 0.75rem;
 
-    /* Brand palette */
-    --teal: #0d7a7a;
-    --teal-light: #0fa8a8;
-    --teal-pale: #e6f7f7;
-    --graphite: #1e2330;
-    --graphite-mid: #3d4455;
-    --graphite-light: #6b7280;
+    /* Brand palette — synced with Хакни Нейросети logo */
+    --teal: #0891b2; /* основной акцент — насыщенный циан */
+    --teal-light: #22d3ee; /* светлый акцент из логотипа */
+    --teal-pale: #e0f7fb; /* бледный фон */
+    --navy: #1a2744; /* тёмно-синий из логотипа */
+    --graphite: #1a2744; /* текст заголовков = navy */
+    --graphite-mid: #2e3f6e; /* средний оттенок */
+    --graphite-light: #64748b;
     --white: #ffffff;
-    --off-white: #f8fafc;
-    --border-light: #e8edf3;
+    --off-white: #f7fbfc;
+    --border-light: #e2eef2;
   }
 }
 
@@ -84,7 +85,7 @@
 
 /* ─── Teal gradient text ─── */
 .gradient-text-teal {
-  background: linear-gradient(135deg, #0d7a7a, #0fa8a8);
+  background: linear-gradient(135deg, #0891b2, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -92,7 +93,7 @@
 
 /* ─── Buttons ─── */
 .btn-primary {
-  background: var(--teal);
+  background: linear-gradient(135deg, #0891b2, #0e7490);
   color: #fff;
   transition:
     background 0.2s,
@@ -100,8 +101,8 @@
     transform 0.15s;
 }
 .btn-primary:hover {
-  background: #0b6b6b;
-  box-shadow: 0 8px 28px rgba(13, 122, 122, 0.35);
+  background: linear-gradient(135deg, #0e7490, #0c6080);
+  box-shadow: 0 8px 28px rgba(8, 145, 178, 0.4);
   transform: translateY(-2px);
 }
 
@@ -259,7 +260,7 @@
 
 /* ─── Subtle mesh bg ─── */
 .hero-bg {
-  background: linear-gradient(145deg, #f0fafa 0%, #f8fafc 45%, #eaf6f6 100%);
+  background: linear-gradient(145deg, #e8f6fb 0%, #f7fbfc 50%, #edf3f8 100%);
 }
 
 /* ─── Decorative teal accent line ─── */

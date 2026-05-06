@@ -25,7 +25,7 @@ export default function FinalCtaSection() {
         ref={ref}
         id="final-cta"
         className="relative py-28 px-6 overflow-hidden"
-        style={{ background: "#0f1f1f" }}
+        style={{ background: "#0c1a2e" }}
       >
         {/* Subtle grid */}
         <div
@@ -109,7 +109,7 @@ export default function FinalCtaSection() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer style={{ background: "#0a1818" }} className="px-6 pt-14 pb-8">
+      <footer style={{ background: "#081525" }} className="px-6 pt-14 pb-8">
         <div className="max-w-5xl mx-auto">
 
           {/* Top row */}

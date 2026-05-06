@@ -57,21 +57,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				violet: {
-					400: '#A78BFA',
-					500: '#8B5CF6',
-					600: '#7C3AED',
-					700: '#6D28D9',
-				},
-				pink: {
-					400: '#F472B6',
-					500: '#EC4899',
-					600: '#DB2777',
-				},
-				cyan: {
-					400: '#22D3EE',
-					500: '#06B6D4',
-					600: '#0891B2',
+				// Brand: Хакни Нейросети
+				brand: {
+					cyan:    '#0891b2',  // основной акцент
+					'cyan-light': '#22d3ee',
+					'cyan-pale':  '#e0f7fb',
+					navy:    '#1a2744',  // тёмно-синий из логотипа
+					'navy-mid':   '#2e3f6e',
 				},
 			},
 			borderRadius: {
