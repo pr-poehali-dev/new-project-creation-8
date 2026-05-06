@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import TransformSection from "@/components/TransformSection";
 import AudienceSection from "@/components/AudienceSection";
+import WhyUsSection from "@/components/WhyUsSection";
 import CoursesSection from "@/components/CoursesSection";
 import AboutContacts from "@/components/AboutContacts";
 
@@ -41,6 +42,8 @@ export default function Index() {
       <TransformSection />
 
       <AudienceSection />
+
+      <WhyUsSection />
 
       <CoursesSection />
 
