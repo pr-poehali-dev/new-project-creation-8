@@ -256,11 +256,15 @@ export default function CasesSection() {
             { value: "72 ч", label: "практики" },
             { value: "30", label: "участников в потоке" },
           ].map((s) => (
-            <div key={s.label} className="text-center">
-              <div className="font-montserrat font-bold text-2xl md:text-3xl mb-1" style={{ color: "var(--teal)" }}>
+            <div key={s.label} className="text-center group cursor-default">
+              <div
+                className="font-montserrat font-bold text-2xl md:text-3xl mb-1 transition-transform duration-300 group-hover:scale-110"
+                style={{ color: "var(--teal)" }}
+              >
                 {s.value}
               </div>
               <div className="text-xs text-[#6b7280]">{s.label}</div>
+              <div className="mt-2 h-0.5 w-0 mx-auto rounded-full group-hover:w-8 transition-all duration-300 shimmer-line" style={{ background: "var(--teal)" }} />
             </div>
           ))}
         </div>

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const REVIEWS = [
   {
@@ -47,6 +48,34 @@ const STATS = [
   { value: "72 ч", label: "практики" },
   { value: "№1", label: "живая школа ИИ во Владивостоке" },
 ];
+
+function StatCard({ stat, index, active }: { stat: { value: string; label: string }; index: number; active: boolean }) {
+  const numericMatch = stat.value.match(/\d+/);
+  const numericTarget = numericMatch ? parseInt(numericMatch[0]) : 0;
+  const hasCounter = numericTarget > 1 && !stat.value.includes("№");
+  const count = useCountUp(numericTarget, 1200 + index * 150, active);
+
+  const displayValue = hasCounter
+    ? stat.value.replace(/\d+/, String(count))
+    : stat.value;
+
+  return (
+    <div
+      className="card-interactive bg-white rounded-2xl p-5 text-center border border-[#e8edf3]"
+      style={{
+        boxShadow: "0 2px 8px rgba(30,35,48,0.05)",
+        opacity: active ? 1 : 0,
+        transform: active ? "translateY(0)" : "translateY(20px)",
+        transition: `opacity 0.5s ease ${index * 0.1}s, transform 0.5s ease ${index * 0.1}s`,
+      }}
+    >
+      <div className="font-montserrat font-bold text-2xl md:text-3xl mb-1" style={{ color: "var(--teal)" }}>
+        {displayValue}
+      </div>
+      <div className="text-xs text-[#6b7280]">{stat.label}</div>
+    </div>
+  );
+}
 
 function Stars({ count }: { count: number }) {
   return (
@@ -98,20 +127,8 @@ export default function TrustSection() {
         <div
           className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-14 transition-all duration-700 delay-100 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
         >
-          {STATS.map((s) => (
-            <div
-              key={s.label}
-              className="bg-white rounded-2xl p-5 text-center border border-[#e8edf3]"
-              style={{ boxShadow: "0 2px 8px rgba(30,35,48,0.05)" }}
-            >
-              <div
-                className="font-montserrat font-bold text-2xl md:text-3xl mb-1"
-                style={{ color: "var(--teal)" }}
-              >
-                {s.value}
-              </div>
-              <div className="text-xs text-[#6b7280]">{s.label}</div>
-            </div>
+          {STATS.map((s, i) => (
+            <StatCard key={s.label} stat={s} index={i} active={inView} />
           ))}
         </div>
 

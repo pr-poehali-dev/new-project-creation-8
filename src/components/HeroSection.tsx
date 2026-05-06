@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Icon from "@/components/ui/icon";
+import { useCountUp } from "@/hooks/useCountUp";
 
 const BG_IMAGE =
   "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/files/4d9a3096-572a-487c-a47f-9408dbcf714d.jpg";
@@ -25,11 +26,24 @@ interface HeroSectionProps {
 
 export default function HeroSection({ scrollTo }: HeroSectionProps) {
   const [inView, setInView] = useState(false);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const ref = useRef<HTMLElement>(null);
+
+  const count24 = useCountUp(24, 1200, inView);
+  const count72 = useCountUp(72, 1400, inView);
+  const count30 = useCountUp(30, 1000, inView);
 
   useEffect(() => {
     const timer = setTimeout(() => setInView(true), 80);
     return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    const handle = (e: MouseEvent) => {
+      setMousePos({ x: e.clientX / window.innerWidth - 0.5, y: e.clientY / window.innerHeight - 0.5 });
+    };
+    window.addEventListener("mousemove", handle);
+    return () => window.removeEventListener("mousemove", handle);
   }, []);
 
   return (
@@ -38,14 +52,31 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
       id="hero"
       className="relative min-h-screen hero-bg overflow-hidden flex items-center"
     >
-      {/* Decorative blobs */}
+      {/* Decorative blobs — parallax on mouse */}
       <div
-        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full opacity-30 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #0fa8a8 0%, transparent 70%)", filter: "blur(80px)" }}
+        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full opacity-25 pointer-events-none animate-blob transition-transform duration-700"
+        style={{
+          background: "radial-gradient(circle, #22d3ee 0%, transparent 70%)",
+          filter: "blur(80px)",
+          transform: `translate(${mousePos.x * -28}px, ${mousePos.y * -20}px)`,
+        }}
       />
       <div
-        className="absolute bottom-0 left-0 w-[380px] h-[380px] rounded-full opacity-20 pointer-events-none"
-        style={{ background: "radial-gradient(circle, #0d7a7a 0%, transparent 70%)", filter: "blur(90px)" }}
+        className="absolute bottom-0 left-0 w-[380px] h-[380px] rounded-full opacity-20 pointer-events-none animate-blob-delay transition-transform duration-700"
+        style={{
+          background: "radial-gradient(circle, #0891b2 0%, transparent 70%)",
+          filter: "blur(90px)",
+          transform: `translate(${mousePos.x * 20}px, ${mousePos.y * 16}px)`,
+        }}
+      />
+      {/* Third subtle navy blob */}
+      <div
+        className="absolute top-1/2 left-1/2 w-[300px] h-[300px] rounded-full opacity-10 pointer-events-none animate-blob transition-transform duration-700"
+        style={{
+          background: "radial-gradient(circle, #1a2744 0%, transparent 70%)",
+          filter: "blur(60px)",
+          transform: `translate(calc(-50% + ${mousePos.x * 14}px), calc(-50% + ${mousePos.y * 10}px))`,
+        }}
       />
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -115,16 +146,22 @@ export default function HeroSection({ scrollTo }: HeroSectionProps) {
             </button>
           </div>
 
-          {/* Stats mini-row */}
-          <div className="mt-6 flex flex-wrap gap-4 animate-fade-up delay-500">
+          {/* Stats mini-row — animated counters */}
+          <div className="mt-6 flex flex-wrap gap-5 animate-fade-up delay-500">
             {[
-              { value: "24", label: "урока" },
-              { value: "72 ч", label: "практики" },
-              { value: "30", label: "участников" },
-            ].map(s => (
-              <div key={s.label} className="flex items-center gap-2">
-                <span className="font-montserrat font-black text-xl" style={{ color: "var(--teal)" }}>{s.value}</span>
+              { count: count24, suffix: "", label: "урока" },
+              { count: count72, suffix: " ч", label: "практики" },
+              { count: count30, suffix: "", label: "участников" },
+            ].map((s, i) => (
+              <div key={s.label} className="flex items-center gap-2 group">
+                <span
+                  className="font-montserrat font-black text-2xl tabular-nums transition-all duration-300"
+                  style={{ color: "var(--teal)" }}
+                >
+                  {s.count}{s.suffix}
+                </span>
                 <span className="text-sm text-[#6b7280]">{s.label}</span>
+                {i < 2 && <span className="text-[#e8edf3] font-light ml-1">·</span>}
               </div>
             ))}
           </div>

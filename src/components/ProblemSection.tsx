@@ -68,10 +68,10 @@ export default function ProblemSection() {
             <div
               key={card.title}
               className={`
-                group relative rounded-2xl p-7 border transition-all duration-300 cursor-default
+                group relative rounded-2xl p-7 border cursor-default
                 ${card.accent
-                  ? "border-transparent text-white"
-                  : "bg-white border-[#e8edf3] hover:shadow-lg hover:-translate-y-1"
+                  ? "border-transparent text-white card-interactive"
+                  : "bg-white border-[#e8edf3] card-interactive"
                 }
               `}
               style={
