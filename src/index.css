@@ -1,14 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --radius: 0.5rem;
+    --background: 220 70% 14%;
+    --foreground: 0 0% 100%;
+    --card: 222 65% 18%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 65% 18%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 40 65% 56%;
+    --primary-foreground: 220 70% 12%;
+    --secondary: 222 50% 24%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 222 40% 26%;
+    --muted-foreground: 220 15% 70%;
+    --accent: 40 65% 56%;
+    --accent-foreground: 220 70% 12%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 222 40% 28%;
+    --input: 222 40% 28%;
+    --ring: 40 65% 56%;
+    --radius: 0.75rem;
+
+    --gold: #d8a544;
+    --gold-light: #e8c074;
+    --navy: #0a1a3f;
+    --navy-deep: #061230;
+    --navy-card: #0e2350;
+    --navy-mid: #16306a;
   }
 
   * {
@@ -17,6 +41,253 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: sans-serif;
+    font-family: "Manrope", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #0a1a3f;
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* ─── Typography ─── */
+.heading-display {
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.gradient-gold {
+  background: linear-gradient(135deg, #e8c074, #d8a544);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ─── Buttons ─── */
+.btn-gold {
+  background: linear-gradient(135deg, #e8c074, #d8a544);
+  color: #0a1a3f;
+  font-weight: 700;
+  transition:
+    transform 0.15s,
+    box-shadow 0.2s,
+    filter 0.2s;
+}
+.btn-gold:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 10px 32px rgba(216, 165, 68, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold);
+  border: 1.5px solid var(--gold);
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.btn-outline-gold:hover {
+  background: rgba(216, 165, 68, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-dark {
+  background: #0c1c40;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-weight: 600;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+}
+.btn-dark:hover {
+  background: #122a5c;
+  transform: translateY(-2px);
+}
+
+/* ─── Cards ─── */
+.card-navy {
+  background: linear-gradient(
+    160deg,
+    rgba(20, 42, 90, 0.55),
+    rgba(10, 26, 63, 0.4)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  transition:
+    border-color 0.25s,
+    transform 0.25s,
+    box-shadow 0.25s;
+}
+.card-navy:hover {
+  border-color: rgba(216, 165, 68, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+.icon-box {
+  width: 44px;
+  height: 44px;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(216, 165, 68, 0.12);
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+/* ─── Backgrounds ─── */
+.hero-flag {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10, 26, 63, 0.55) 0%,
+      rgba(10, 26, 63, 0.9) 70%
+    ),
+    url("https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/files/8ae1a0b1-7e5b-416f-93fe-0ba14d0dfa27.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.section-dark {
+  background: #0a1a3f;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-watermark {
+  position: absolute;
+  font-size: 40rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.018);
+  line-height: 0.8;
+  right: -2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+
+/* ─── Scroll-progress bar ─── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  z-index: 9999;
+  background: linear-gradient(to right, #d8a544, #e8c074);
+  transition: width 0.1s linear;
+}
+
+/* ─── Animations ─── */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fade-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-in-up 0.7s ease-out both;
+}
+.animate-fade-right {
+  animation: fade-in-right 0.7s ease-out both;
+}
+.animate-scale-in {
+  animation: scale-in 0.6s ease-out both;
+}
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-400 {
+  animation-delay: 0.4s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+/* card lift on hover (spring) */
+.card-interactive {
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.25s ease,
+    border-color 0.25s;
+}
+.card-interactive:hover {
+  transform: translateY(-6px);
+  border-color: rgba(216, 165, 68, 0.4);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.4);
 }

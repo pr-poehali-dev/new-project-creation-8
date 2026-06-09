@@ -1,17 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import Values from "@/components/landing/Values";
+import About from "@/components/landing/About";
+import WhyImportant from "@/components/landing/WhyImportant";
+import Ceremony from "@/components/landing/Ceremony";
+import Monument from "@/components/landing/Monument";
+import Capsule from "@/components/landing/Capsule";
+import Place from "@/components/landing/Place";
+import Support from "@/components/landing/Support";
+import Faq from "@/components/landing/Faq";
+import Footer from "@/components/landing/Footer";
 
-const Index = () => {
+export default function Index() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 color-black text-black">Добро пожаловать!</h1>
-        <p className="text-xl text-gray-600">тут будет отображаться ваш проект</p>
-      </div>
-      <span className="absolute bottom-8 left-1/2 -translate-x-1/2 inline-block bg-[#FF6637] text-white text-sm px-4 py-2 rounded-full whitespace-nowrap">
-        Подождите 5 минут, Юра создает первую версию проекта с нуля
-      </span>
+    <div className="bg-[#0a1a3f] min-h-screen">
+      <Header />
+      <Hero />
+      <Values />
+      <About />
+      <WhyImportant />
+      <Ceremony />
+      <Monument />
+      <Capsule />
+      <Place />
+      <Support />
+      <Faq />
+      <Footer />
     </div>
   );
-};
-
-export default Index;
+}

@@ -20,8 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'golos': ['Golos Text', 'sans-serif'],
-				'montserrat': ['Montserrat', 'sans-serif'],
+				'golos': ['Manrope', 'sans-serif'],
+				'montserrat': ['Manrope', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,13 +57,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Brand: Хакни Нейросети
+				// Brand: Памятник предпринимателям Приморья
 				brand: {
-					cyan:    '#0891b2',  // основной акцент
-					'cyan-light': '#22d3ee',
-					'cyan-pale':  '#e0f7fb',
-					navy:    '#1a2744',  // тёмно-синий из логотипа
-					'navy-mid':   '#2e3f6e',
+					gold:       '#d8a544',  // золотой акцент
+					'gold-light': '#e8c074',
+					navy:       '#0a1a3f',  // основной тёмно-синий фон
+					'navy-deep': '#061230',  // самый тёмный
+					'navy-card': '#0e2350',  // фон карточек
+					'navy-mid':  '#16306a',  // средний синий
 				},
 			},
 			borderRadius: {
