@@ -14,11 +14,11 @@ export default function Hero() {
       {/* decorative big year "20" */}
       <div className="hero-20">20</div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
         {/* LEFT */}
-        <div className="animate-fade-up order-2 lg:order-1">
+        <div className="animate-fade-up order-2 lg:order-1 min-w-0">
           <p className="section-label mb-4 sm:mb-6">Приморское краевое отделение «ОПОРЫ РОССИИ»</p>
-          <h1 className="heading-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-5 sm:mb-7">
+          <h1 className="heading-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-[64px] xl:text-7xl mb-5 sm:mb-7 break-words">
             Памятник<br />
             <span className="gradient-gold">предпринимателям</span><br />
             Приморья
