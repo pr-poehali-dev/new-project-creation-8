@@ -26,17 +26,17 @@ export default function Support() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="support" className="section-dark py-24 px-6">
+    <section ref={ref} id="support" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="bg-watermark hidden md:block">20</div>
       <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="heading-display text-white text-4xl md:text-6xl mb-4">Поддержать проект</h2>
-          <p className="text-white/55 text-lg">Стать частью истории Приморья</p>
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-6xl mb-4">Поддержать проект</h2>
+          <p className="text-white/55 text-base sm:text-lg">Стать частью истории Приморья</p>
         </div>
 
-        <div className="card-navy p-8 md:p-12">
+        <div className="card-navy p-6 sm:p-8 md:p-12">
           {/* divider */}
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center gap-4 mb-10 sm:mb-12">
             <div className="flex-1 h-px bg-white/10" />
             <Icon name="Diamond" size={14} className="text-brand-gold" />
             <div className="flex-1 h-px bg-white/10" />

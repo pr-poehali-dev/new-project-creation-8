@@ -30,15 +30,15 @@ export default function Faq() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section ref={ref} id="faq" className="section-dark py-24 px-6">
+    <section ref={ref} id="faq" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="bg-watermark hidden md:block">20</div>
-      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-14">
+      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-14">
         {/* LEFT */}
         <div className={inView ? "animate-fade-up" : "opacity-0"}>
           <p className="section-label mb-3">10 — Часто задаваемые вопросы</p>
-          <div className="w-16 h-0.5 bg-brand-gold/40 mb-8" />
-          <h2 className="heading-display text-white text-4xl md:text-5xl mb-5">Часто задаваемые вопросы</h2>
-          <p className="text-white/50 text-lg">Ответы на основные вопросы о проекте.</p>
+          <div className="w-16 h-0.5 bg-brand-gold/40 mb-6 sm:mb-8" />
+          <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-5xl mb-5">Часто задаваемые вопросы</h2>
+          <p className="text-white/50 text-base sm:text-lg">Ответы на основные вопросы о проекте.</p>
         </div>
 
         {/* RIGHT */}

@@ -14,17 +14,17 @@ export default function About() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="about" className="section-dark py-24 px-6">
+    <section ref={ref} id="about" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="bg-watermark hidden md:block">20</div>
       <div className="max-w-7xl mx-auto relative z-10">
         <p className="section-label mb-3">02 — О проекте</p>
-        <div className="w-16 h-0.5 bg-brand-gold/40 mb-12" />
+        <div className="w-16 h-0.5 bg-brand-gold/40 mb-8 sm:mb-12" />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12">
           {/* LEFT */}
           <div className={inView ? "animate-fade-up" : "opacity-0"}>
-            <h2 className="heading-display text-white text-4xl md:text-5xl mb-7">О проекте</h2>
-            <p className="text-white/75 text-lg leading-relaxed mb-5">
+            <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-5xl mb-6 sm:mb-7">О проекте</h2>
+            <p className="text-white/75 text-base sm:text-lg leading-relaxed mb-5">
               Этот памятник посвящён предпринимателям — тем, кто созидает, берёт ответственность, объединяет людей и формирует экономику региона не лозунгами, а ежедневным трудом.
             </p>
             <p className="text-white/55 text-base leading-relaxed mb-8">

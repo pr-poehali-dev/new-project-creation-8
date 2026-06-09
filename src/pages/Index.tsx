@@ -13,7 +13,7 @@ import Footer from "@/components/landing/Footer";
 
 export default function Index() {
   return (
-    <div className="bg-[#0a1a3f] min-h-screen">
+    <div className="bg-[#0a1a3f] min-h-screen overflow-x-hidden">
       <Header />
       <Hero />
       <Values />

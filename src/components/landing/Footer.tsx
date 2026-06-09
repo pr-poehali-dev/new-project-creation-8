@@ -4,9 +4,9 @@ export default function Footer() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <footer className="bg-[#061230] border-t border-white/10 py-14 px-6">
+    <footer className="bg-[#061230] border-t border-white/10 py-10 sm:py-14 px-5 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 mb-10">
           <div>
             <div className="mb-4">
               <img

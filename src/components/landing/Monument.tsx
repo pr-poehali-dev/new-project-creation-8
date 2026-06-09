@@ -14,26 +14,26 @@ export default function Monument() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="monument" className="section-dark py-24 px-6">
+    <section ref={ref} id="monument" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="bg-watermark hidden md:block">20</div>
-      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
         {/* LEFT image */}
         <div className={`flex justify-center ${inView ? "animate-fade-up" : "opacity-0"}`}>
-          <div className="relative">
+          <div className="relative w-full flex justify-center">
             <div className="absolute inset-0 rounded-2xl blur-3xl opacity-25" style={{ background: "radial-gradient(circle,#d8a544,transparent 70%)" }} />
-            <img src={PLAQUE} alt="Памятный знак" className="relative rounded-2xl border border-brand-gold/30 shadow-2xl max-w-[440px] w-full" />
+            <img src={PLAQUE} alt="Памятный знак" className="relative rounded-2xl border border-brand-gold/30 shadow-2xl w-full max-w-[340px] sm:max-w-[440px]" />
           </div>
         </div>
 
         {/* RIGHT */}
         <div className={inView ? "animate-fade-right delay-200" : "opacity-0"}>
           <p className="section-label mb-3">05 — Памятный знак</p>
-          <div className="w-16 h-0.5 bg-brand-gold/40 mb-8" />
-          <h2 className="heading-display text-white text-4xl md:text-5xl mb-6">Памятный знак</h2>
-          <p className="text-white/70 text-lg leading-relaxed mb-4">
+          <div className="w-16 h-0.5 bg-brand-gold/40 mb-6 sm:mb-8" />
+          <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-5xl mb-6">Памятный знак</h2>
+          <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-4">
             Это не декоративный объект, а символ предпринимательской инициативы, созидания и ответственности за будущее региона.
           </p>
-          <p className="text-white/55 leading-relaxed mb-8">
+          <p className="text-white/55 text-sm sm:text-base leading-relaxed mb-8">
             В материале, форме и месте установки знак должен считываться как точка опоры — сдержанная, сильная и долговечная.
           </p>
 

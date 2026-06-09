@@ -21,18 +21,18 @@ export default function Capsule() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="capsule" className="section-dark py-24 px-6">
+    <section ref={ref} id="capsule" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="bg-watermark hidden md:block">20</div>
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-14">
+        <div className="text-center mb-10 sm:mb-14">
           <p className="section-label mb-4">06 — Капсула времени</p>
-          <h2 className="heading-display text-white text-4xl md:text-6xl mb-5">Капсула времени</h2>
-          <p className="text-white/55 text-lg max-w-2xl mx-auto leading-relaxed">
+          <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-6xl mb-5">Капсула времени</h2>
+          <p className="text-white/55 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Послание тем, кто будет строить предпринимательскую среду Приморья через 20 лет.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
           {/* LEFT image */}
           <div className={inView ? "animate-fade-up" : "opacity-0"}>
             <div className="relative">
@@ -73,7 +73,7 @@ export default function Capsule() {
               </AccordionItem>
             </div>
 
-            <div className="flex items-center gap-10 mt-8 pt-7 border-t border-white/10">
+            <div className="flex items-center gap-8 sm:gap-10 mt-8 pt-7 border-t border-white/10">
               {QUICK.map((q) => (
                 <div key={q.label} className="flex flex-col items-center gap-2 text-white/50">
                   <Icon name={q.icon} size={22} className="text-brand-gold" />

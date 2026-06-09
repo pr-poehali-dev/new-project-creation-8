@@ -12,12 +12,12 @@ export default function Values() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} className="section-dark py-16 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 relative z-10">
+    <section ref={ref} className="section-dark py-12 sm:py-16 px-5 sm:px-6">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10">
         {VALUES.map((v, i) => (
           <div
             key={v.title}
-            className="card-navy card-interactive p-7"
+            className="card-navy card-interactive p-6 sm:p-7"
             style={{
               opacity: inView ? 1 : 0,
               transform: inView ? "translateY(0)" : "translateY(24px)",

@@ -236,6 +236,41 @@
     opacity: 0.5;
   }
 }
+@media (max-width: 640px) {
+  .hero-20 {
+    font-size: 14rem;
+    right: -1rem;
+    top: 22%;
+    opacity: 0.4;
+  }
+  /* on mobile spread the flag across full width, fade only top/bottom */
+  .hero-flag-img {
+    background-position: center top;
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 70%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 70%,
+      transparent 100%
+    );
+    opacity: 0.6;
+  }
+  .hero-flag-haze {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 26, 63, 0.4) 0%,
+      rgba(10, 26, 63, 0.75) 55%,
+      rgba(10, 26, 63, 0.95) 100%
+    );
+  }
+}
 
 .section-dark {
   background: #0a1a3f;
@@ -255,6 +290,12 @@
   pointer-events: none;
   user-select: none;
   z-index: 0;
+}
+@media (max-width: 768px) {
+  .bg-watermark {
+    font-size: 20rem;
+    right: -1rem;
+  }
 }
 
 /* ─── Scroll-progress bar ─── */

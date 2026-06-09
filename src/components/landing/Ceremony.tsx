@@ -13,24 +13,24 @@ export default function Ceremony() {
   const { ref, inView } = useInView();
 
   return (
-    <section ref={ref} id="ceremony" className="section-dark py-24 px-6">
+    <section ref={ref} id="ceremony" className="section-dark py-16 sm:py-24 px-5 sm:px-6">
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Banner */}
-        <div className="relative rounded-3xl overflow-hidden border border-white/10 mb-12">
+        <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 mb-8 sm:mb-12">
           <img src={CEREMONY_IMG} alt="Торжественная закладка камня" className="absolute inset-0 w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a3f] via-[#0a1a3f]/85 to-[#0a1a3f]/40" />
-          <div className={`relative z-10 p-8 md:p-14 max-w-2xl ${inView ? "animate-fade-up" : "opacity-0"}`}>
-            <p className="section-label mb-5">04 — Закладка камня</p>
-            <h2 className="heading-display text-white text-4xl md:text-5xl mb-6">
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1a3f] via-[#0a1a3f]/90 to-[#0a1a3f]/50 sm:to-[#0a1a3f]/40" />
+          <div className={`relative z-10 p-6 sm:p-8 md:p-14 max-w-2xl ${inView ? "animate-fade-up" : "opacity-0"}`}>
+            <p className="section-label mb-4 sm:mb-5">04 — Закладка камня</p>
+            <h2 className="heading-display text-white text-3xl sm:text-4xl md:text-5xl mb-5 sm:mb-6">
               Торжественная закладка камня
             </h2>
-            <span className="inline-block btn-outline-gold px-5 py-2.5 rounded-md text-sm font-bold mb-7">
+            <span className="inline-block btn-outline-gold px-5 py-2.5 rounded-md text-sm font-bold mb-6 sm:mb-7">
               19 июня 2026 года
             </span>
-            <p className="text-white/80 text-lg leading-relaxed mb-4">
+            <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-4">
               В честь 20-летия Приморского краевого отделения «ОПОРЫ РОССИИ» состоится торжественная церемония закладки памятного камня и капсулы времени.
             </p>
-            <p className="text-white/55 leading-relaxed">
+            <p className="text-white/55 text-sm sm:text-base leading-relaxed">
               Место проведения — площадь Адмирала Фокина, Владивосток. Центральная городская площадь, место встреч и событий.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function Ceremony() {
           {INFO.map((item, i) => (
             <div
               key={item.label}
-              className="bg-[#0a1a3f] p-7 flex items-start gap-4"
+              className="bg-[#0a1a3f] p-6 sm:p-7 flex items-start gap-4"
               style={{
                 opacity: inView ? 1 : 0,
                 transform: inView ? "translateY(0)" : "translateY(20px)",
