@@ -2,7 +2,7 @@ import Icon from "@/components/ui/icon";
 import AccordionItem from "./AccordionItem";
 import { useInView } from "@/hooks/useInView";
 
-const PLAQUE = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/files/a2e3a144-1eff-490f-8d39-5f733eec7358.jpg";
+const PLAQUE = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/08fb022c-cacb-4883-93da-e6044b716492.png";
 
 const FEATURES = [
   { icon: "Info", title: "Смысл", text: "Символ предпринимательской инициативы, созидания и ответственности за будущее региона." },
@@ -21,7 +21,7 @@ export default function Monument() {
         <div className={`flex justify-center ${inView ? "animate-fade-up" : "opacity-0"}`}>
           <div className="relative w-full flex justify-center">
             <div className="absolute inset-0 rounded-2xl blur-3xl opacity-25" style={{ background: "radial-gradient(circle,#d8a544,transparent 70%)" }} />
-            <img src={PLAQUE} alt="Памятный знак" className="relative rounded-2xl border border-brand-gold/30 shadow-2xl w-full max-w-[340px] sm:max-w-[440px]" />
+            <img src={PLAQUE} alt="Памятный знак" className="relative rounded-2xl border border-brand-gold/30 shadow-2xl w-full max-w-[400px] sm:max-w-[520px]" />
           </div>
         </div>
 

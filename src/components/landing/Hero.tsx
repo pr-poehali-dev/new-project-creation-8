@@ -1,6 +1,6 @@
 import Icon from "@/components/ui/icon";
 
-const PLAQUE = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/files/a2e3a144-1eff-490f-8d39-5f733eec7358.jpg";
+const PLAQUE = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/08fb022c-cacb-4883-93da-e6044b716492.png";
 
 export default function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -42,14 +42,14 @@ export default function Hero() {
         {/* RIGHT — plaque */}
         <div className="relative animate-scale-in delay-200 flex justify-center order-1 lg:order-2">
           <div className="absolute inset-0 rounded-2xl blur-3xl opacity-30" style={{ background: "radial-gradient(circle,#d8a544,transparent 70%)" }} />
-          <div className="relative animate-float w-full flex justify-center">
+          <div className="relative animate-float w-full flex flex-col items-center max-w-[360px] sm:max-w-[520px]">
             <img
               src={PLAQUE}
               alt="Памятный знак предпринимателям"
-              className="rounded-2xl shadow-2xl border border-brand-gold/30 w-full max-w-[320px] sm:max-w-[420px]"
+              className="rounded-2xl shadow-2xl border border-brand-gold/30 w-full"
             />
-            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent rounded-b-2xl p-5">
-              <p className="text-brand-gold text-xs tracking-widest uppercase font-semibold">
+            <div className="mt-4 text-center">
+              <p className="text-brand-gold text-[11px] sm:text-xs tracking-widest uppercase font-semibold">
                 Площадь Адмирала Фокина · Владивосток
               </p>
             </div>
