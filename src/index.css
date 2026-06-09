@@ -219,15 +219,16 @@
   container-type: inline-size;
 }
 .hero-title {
-  /* ~6.7cqw * 16 chars keeps the longest word within the column width */
-  font-size: clamp(2rem, 6.7cqw, 5.25rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  /* ~7.2cqw keeps the longest word ("предпринимателям") right up to
+     the column edge without crossing under the photo */
+  font-size: clamp(2rem, 7.2cqw, 6rem);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
 }
 /* Fallback for stacked (mobile) layout where column = full width */
 @media (max-width: 1023px) {
   .hero-title {
-    font-size: clamp(2rem, 10vw, 4.5rem);
+    font-size: clamp(2rem, 11vw, 5rem);
   }
 }
 
