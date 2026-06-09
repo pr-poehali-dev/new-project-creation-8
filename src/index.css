@@ -213,6 +213,24 @@
     );
 }
 
+/* Hero title — font-size follows the column width so the longest
+   word ("предпринимателям", 16 chars) always fits on one line */
+.hero-left {
+  container-type: inline-size;
+}
+.hero-title {
+  /* ~6.2cqw * 16 chars keeps the longest word within the column width */
+  font-size: clamp(1.75rem, 6.2cqw, 4.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+}
+/* Fallback for stacked (mobile) layout where column = full width */
+@media (max-width: 1023px) {
+  .hero-title {
+    font-size: clamp(1.75rem, 9vw, 3.75rem);
+  }
+}
+
 /* Big "20" watermark in hero */
 .hero-20 {
   position: absolute;

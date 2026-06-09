@@ -16,12 +16,9 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-6 grid grid-cols-1 lg:grid-cols-[1.15fr_1fr] gap-10 lg:gap-16 items-center">
         {/* LEFT */}
-        <div className="animate-fade-up order-2 lg:order-1 min-w-0">
+        <div className="hero-left animate-fade-up order-2 lg:order-1 min-w-0">
           <p className="section-label mb-4 sm:mb-6">Приморское краевое отделение «ОПОРЫ РОССИИ»</p>
-          <h1
-            className="heading-display text-white mb-5 sm:mb-7"
-            style={{ fontSize: "clamp(1.75rem, 7vw, 4.5rem)", lineHeight: 1.05 }}
-          >
+          <h1 className="hero-title heading-display text-white mb-5 sm:mb-7">
             <span className="block whitespace-nowrap">Памятник</span>
             <span className="block whitespace-nowrap gradient-gold">предпринимателям</span>
             <span className="block whitespace-nowrap">Приморья</span>
