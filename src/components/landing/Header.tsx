@@ -30,13 +30,13 @@ export default function Header() {
         scrolled ? "bg-[#0a1a3f]/95 backdrop-blur-md shadow-lg shadow-black/20" : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
         {/* Logo */}
         <button onClick={() => scrollTo("hero")} className="flex items-center">
           <img
             src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/46bb4f32-bdde-4795-8b4f-15bac7daff2a.png"
             alt="ОПОРА РОССИИ — Приморское краевое отделение"
-            className="h-9 md:h-11 w-auto object-contain"
+            className="h-16 md:h-20 w-auto object-contain"
           />
         </button>
 

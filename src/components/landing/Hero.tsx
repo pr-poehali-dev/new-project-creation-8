@@ -6,7 +6,11 @@ export default function Hero() {
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <section id="hero" className="relative min-h-screen hero-flag flex items-center overflow-hidden pt-24 pb-16">
+    <section id="hero" className="relative min-h-screen hero-flag flex items-center overflow-hidden pt-28 pb-16">
+      {/* Russian flag layer with soft haze dissolve */}
+      <div className="hero-flag-img" />
+      <div className="hero-flag-haze" />
+
       {/* decorative big year "20" */}
       <div className="hero-20">20</div>
 
