@@ -7,8 +7,8 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative min-h-screen hero-flag flex items-center overflow-hidden pt-24 pb-16">
-      {/* decorative big year watermark */}
-      <div className="bg-watermark hidden md:block">20</div>
+      {/* decorative big year "20" */}
+      <div className="hero-20">20</div>
 
       <div className="relative z-10 max-w-7xl mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* LEFT */}

@@ -32,14 +32,12 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <button onClick={() => scrollTo("hero")} className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-md flex items-center justify-center" style={{ background: "linear-gradient(135deg,#e8c074,#d8a544)" }}>
-            <Icon name="Landmark" size={20} className="text-[#0a1a3f]" />
-          </div>
-          <div className="text-left leading-tight">
-            <div className="text-white font-bold text-sm">ОПОРА РОССИИ</div>
-            <div className="text-white/50 text-[10px] tracking-wider uppercase">Приморское краевое отделение</div>
-          </div>
+        <button onClick={() => scrollTo("hero")} className="flex items-center">
+          <img
+            src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/46bb4f32-bdde-4795-8b4f-15bac7daff2a.png"
+            alt="ОПОРА РОССИИ — Приморское краевое отделение"
+            className="h-9 md:h-11 w-auto object-contain"
+          />
         </button>
 
         {/* Desktop nav */}

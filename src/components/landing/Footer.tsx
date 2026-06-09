@@ -8,14 +8,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-9 h-9 rounded-md flex items-center justify-center" style={{ background: "linear-gradient(135deg,#e8c074,#d8a544)" }}>
-                <Icon name="Landmark" size={20} className="text-[#0a1a3f]" />
-              </div>
-              <div>
-                <div className="text-white font-bold text-sm">ОПОРА РОССИИ</div>
-                <div className="text-white/50 text-[10px] tracking-wider uppercase">Приморское краевое отделение</div>
-              </div>
+            <div className="mb-4">
+              <img
+                src="https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/46bb4f32-bdde-4795-8b4f-15bac7daff2a.png"
+                alt="ОПОРА РОССИИ — Приморское краевое отделение"
+                className="h-10 w-auto object-contain"
+              />
             </div>
             <p className="text-white/45 text-sm leading-relaxed max-w-xs">
               Памятник предпринимателям Приморья — знак уважения к людям, которые создают будущее региона.
