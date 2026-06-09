@@ -18,10 +18,13 @@ export default function Hero() {
         {/* LEFT */}
         <div className="animate-fade-up order-2 lg:order-1 min-w-0">
           <p className="section-label mb-4 sm:mb-6">Приморское краевое отделение «ОПОРЫ РОССИИ»</p>
-          <h1 className="heading-display text-white text-4xl sm:text-5xl md:text-6xl lg:text-[64px] xl:text-7xl mb-5 sm:mb-7 break-words">
-            Памятник<br />
-            <span className="gradient-gold">предпринимателям</span><br />
-            Приморья
+          <h1
+            className="heading-display text-white mb-5 sm:mb-7"
+            style={{ fontSize: "clamp(1.75rem, 7vw, 4.5rem)", lineHeight: 1.05 }}
+          >
+            <span className="block whitespace-nowrap">Памятник</span>
+            <span className="block whitespace-nowrap gradient-gold">предпринимателям</span>
+            <span className="block whitespace-nowrap">Приморья</span>
           </h1>
           <p className="text-white/85 text-base sm:text-lg md:text-xl leading-relaxed mb-4 sm:mb-5 max-w-xl">
             Знак уважения к людям, которые создают рабочие места, развивают город и закладывают фундамент будущего региона.
