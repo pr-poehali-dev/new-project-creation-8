@@ -1,7 +1,7 @@
 import Icon from "@/components/ui/icon";
 import { useInView } from "@/hooks/useInView";
 
-const CEREMONY_IMG = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/files/1eeb9799-3b90-4aac-8db6-7ba0970c37dd.jpg";
+const CEREMONY_IMG = "https://cdn.poehali.dev/projects/9e6ab7cb-02b9-4bdf-903b-219f3b05fb8d/bucket/255a22ba-01ab-442f-996b-5f8c2e3e8888.jpg";
 
 const INFO = [
   { icon: "Calendar", label: "Дата", value: "19 июня 2026 года" },
